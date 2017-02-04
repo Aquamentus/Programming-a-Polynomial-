@@ -1,2 +1,20 @@
 # Programming-a-Polynomial-
-This project sets out to make a basic 2nd degree polynomial template, that has addition and multiplication functions.  
+#ifndef BASIC_POLYNOMIAL_H
+#define BASIC_POLYNOMIAL_H
+
+tmeplate<class T>
+class Polynomial
+{
+public:
+  Polynomial(const T& = 1, const T& = 1, const T& = 1);
+  Polynomial(const Polynomial&);
+  T operator+(const Polynomial&, const Polynomial&);
+  T operator*(const Polynomial&, const Polynomial&);
+  void setCoefficiant(T,itorator);
+  
+private:
+  vector< T > coefficiants;
+  
+}
+
+#endif
