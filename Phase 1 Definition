@@ -1,0 +1,23 @@
+#include "CIS269_Matthew Downs_HW2 Polynomial.h"
+#include <vector>
+
+template<class T>
+Polynomial<T>::Polynomial(const T &a, const T &b, const T &c) : coeff(5)
+{
+    coeff[2] = a;
+	coeff[1] = b;
+	coeff[0] = c;
+}
+
+template<class T>
+Polynomial<T>::Polynomial(const Polynomial &PolyCopy)
+{
+	for(unsigned int i = 0; i < coeff.size(); i++)
+		coeff[i] = PolyCopy.getCoef(i);
+}
+
+template<class T>
+T Polynomial<T>::getCoef(int coefPos) const
+{
+	return coeff[coefPos];
+}
