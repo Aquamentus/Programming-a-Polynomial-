@@ -1,0 +1,18 @@
+#ifndef CIS269_MATTHEW_DOWNS_HW2_POLYNOMIAL_H_INCLUDED
+#define CIS269_MATTHEW_DOWNS_HW2_POLYNOMIAL_H_INCLUDED
+
+#include <vector>
+
+template<class T>
+class Polynomial
+{
+public:
+    Polynomial(const T& = 1, const T& = 1, const T& = 1);
+    Polynomial(const Polynomial&);
+    T getCoef(int) const;
+    
+private:
+    std::vector<T> coeff; 
+}; 
+
+#endif // CIS269_MATTHEW_DOWNS_HW2_POLYNOMIAL_H_INCLUDED
